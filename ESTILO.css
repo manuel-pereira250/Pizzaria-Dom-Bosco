@@ -1,1 +1,262 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Define variaveis globais para cores e bordas, facilitando a manutenção e ajustes futuros */
+:root {
+    --main-color: #da190f;
+    --bg: #13131a;
+    --bg-card: #0c0c14;
+    --border: 0.1rem solid grey;
+}
+
+/* Remove marfens, paddins e bordas padrões.
+Define o comportamento de trasição padrão para animações e utiliza a font roboto.*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize; /* Letras Maisculas */
+    transition: 0.2s linear; /* Transição habilitada por padrão*/
+    font-family: 'Roboto', 'sans-serif';
+    outline: none; /* Deixamos as caixas e informações sem contorno */
+}
+
+html {
+    font-size: 62.5%; /* Configura o font-size para 62.5%, facilitando o uso do rem (1rem = 10px)*/
+    overflow-x: hidden; /* Evita rolagem horizontal. hidden (itens não estouram)*/
+    scroll-behavior: smooth; /* Adiciona comportamento de rolagem suave*/
+    scroll-padding-top: 9rem; /*é usado como aliado e o crol-smooth para uma melhor visualização do scroll*/
+}
+
+html::-webkit-scrollbar {
+    width: 0.8rem; /* Personaliza o estilo da barra de rolagem no WebKit */
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent; /* Personaliza o estilo da barra de rolagem no WebKit */
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg); /* Define o fundo da página com a variável*/
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+.heading {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase; /* TEXTO EM CAIXA ALTA*/
+    padding-bottom: 3rem;
+    font-size: 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase; /* TEXTO EM CAIXA ALTA*/
+}
+
+.btn {
+    padding: 0.9rem 3rem;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    color: #fff;
+    cursor: pointer;
+    background: var(--main-color);
+    display: inline-block;
+}
+
+.btn:hover {
+    letter-spacing: 0.2rem; /* Espaçamento entre as letras*/
+}
+
+.header {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+
+.header .logo img {
+    height: 6.5rem;
+    border-radius: 100%;
+}
+
+.header nav a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.header nav a:hover {
+    color: var(--main-color); /* muda a cor do hover*/
+    border-bottom: 0.1rem solid var(--main-color); /* adiciona uma linha inferior no hover*/
+    padding-bottom: 0.5rem; /* Adiciona espaçamento inferior no hover*/
+}
+
+.header .icons div {
+    margin-left: 2rem;
+}
+
+.header .icons div ion-icon {
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.header .icons div ion-icon:hover {
+    color: var(--main-color);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+#menu-btn {
+    display: none; /* Ocultar menu hamburguer*/
+}
+
+
+#home {
+    position: relative; /* permite posicionamento relativo*/
+    min-height: 85vh; /* Altura minima da section*/
+    display: flex; /* tornando flex*/
+    align-items: center; /* centralizando verticalmente*/
+    background: url(img/home.jpg); /* Adicionando imagem de fundo*/
+    background-size: cover; 
+    background-position: center;
+    border-bottom: var(--border);
+}
+
+#home::before {
+    content: ""; /* adicionando pseudo-elemento vazio*/
+    position: absolute; /* permite posicionamento absoluto*/
+    top: 0; /* Alinha ao topo*/
+    left: 0; /* alinha á esquerda*/
+    width: 100%; /* ocupação toda a largura*/
+    height: 100%;/* icupação toda altura*/
+    background: rgba(0, 0, 0, 0.5); /* adiciona sobreposição escura*/
+    z-index: 1; /* Posicionando abaixo  do conteúdo eixo Z*/
+}
+
+.content {
+    max-width: 60rem; /* Define largura maxima*/
+    position: relative;/* Permite manipular a posição*/
+    z-index: 2;/* Garante que o conteudo fique acima da sobreposição*/
+}
+
+.content h3 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.content p {
+    font-size: 2rem;
+    font-weight: lighter; /* peso da fonte mais leve*/
+    line-height: 1.8; /* Espaçamento entre as linhas*/
+    padding: 1rem 0;
+    color: #fff;
+}
+
+
+
+
+.row {
+    display: flex;
+    align-items: center;
+    background: var(--bg-card);
+    flex-wrap: wrap;
+    border: var(--border);
+}
+
+.image {
+    flex: 1 1 45rem; /*define o tamanho flexivel do elemento: base 45rem pode crecer ou encolher*/
+}
+
+.row .image img {
+    width: 100%;
+}
+
+.row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+
+.content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+
+.content p {
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8rem;
+}
+
+
+
+
+
+.menu .box-container {
+    display: grid; /* Organixa os elementos internos em um layout de grade*/
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* cria colunas flexiveis com largurasminima de 30rem e maxima proporcional*/
+    gap: 1.5;
+}
+
+
+.box-container .box {
+    padding: 5rem; /* Adicionando espaçamento interno*/
+    text-align: center;
+    border: var(--border);
+    background: var(--bg-card);
+}
+.box img {
+    height: 18rem;
+    border-radius: 100%;
+}
+
+.box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.box .price {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.box .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through; /* Aplica uma linha para indicar o preço riscado*/
+    font-weight: lighter; /* aolica um texto de fundo mais fino*/
+}
+
+.box:hover {
+    background: #fff;
+}
+
+.box:hover > * { /* Altera a cor dos elementos filhos para preto ao passar o mouse*/
+    color: black;
+}
