@@ -260,3 +260,340 @@ section {
 .box:hover > * { /* Altera a cor dos elementos filhos para preto ao passar o mouse*/
     color: black;
 }
+
+
+
+
+/* PROMOÇÕES */
+
+
+.products .box-container {
+    display: grid;
+    /* Organiza os elementos em uma grade */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    /* Cria colunas flexíveis com largura mínima de 30rem e máxima proporcional */
+    gap: 1.5rem;
+    /* Define o espaçamento entre os itens da grade */
+}
+
+.products .box-container .box {
+    text-align: center;
+    /* Centraliza o conteúdo textualmente */
+    border: var(--border);
+    /* Aplica uma borda ao redor da caixa */
+    padding: 2rem;
+    /* Adiciona espaçamento interno na caixa */
+}
+
+.products .box-container .box .icons a ion-icon {
+    height: 3rem;
+    /* Define a altura dos ícones */
+    width: 3rem;
+    /* Define a largura dos ícones */
+    line-height: 3rem;
+    /* Centraliza verticalmente o conteúdo do ícone */
+    font-size: 1.7rem;
+    /* Define o tamanho da fonte para os ícones */
+    border: var(--border);
+    /* Aplica uma borda ao redor dos ícones */
+    color: #fff;
+    /* Define a cor branca para os ícones */
+    margin: 0.3rem;
+    /* Adiciona espaçamento entre os ícones */
+}
+
+.products .box-container .box .icons a ion-icon:hover {
+    background: var(--main-color);
+    /* Altera o fundo dos ícones para a cor principal ao passar o mouse */
+}
+
+.products .box-container .box .image {
+    padding: 2.5rem 0;
+    /* Adiciona espaçamento vertical ao redor da imagem */
+}
+
+.products .box-container .box .image img {
+    height: 25rem;
+    /* Define a altura das imagens */
+}
+
+.products .box-container .box .content {
+    color: #fff;
+    /* Define a cor branca para o conteúdo textual */
+    font-size: 2.5rem;
+    /* Define o tamanho da fonte para o conteúdo */
+}
+
+.products .box-container .box .content .stars {
+    padding: 1.5rem;
+    /* Adiciona espaçamento ao redor da área de estrelas */
+}
+
+.products .box-container .box .content .stars ion-icon {
+    font-size: 1.9rem;
+    /* Define o tamanho das estrelas */
+    color: var(--main-color);
+    /* Aplica a cor principal às estrelas */
+}
+
+.products .box-container .box .content .price {
+    color: #fff;
+    /* Define a cor branca para o preço */
+    font-size: 2.5rem;
+    /* Define o tamanho da fonte para o preço */
+}
+
+.products .box-container .box .content .price span {
+    font-weight: lighter;
+    /* Aplica uma fonte mais fina para o texto adicional do preço */
+    font-size: 1.5rem;
+    /* Define o tamanho da fonte para o texto adicional */
+    text-transform: lowercase;
+    /* Transforma o texto adicional para letras minúsculas */
+}
+
+
+
+
+
+/* REVIEW */
+
+
+.review .box-container {
+    display: grid;
+    /* Organiza os elementos em uma grade */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    /* Cria colunas flexíveis com largura mínima de 30rem e máxima proporcional */
+    gap: 1.5rem;
+    /* Define o espaçamento entre os itens da grade */
+}
+
+.review .box-container .box {
+    border: var(--border);
+    /* Aplica uma borda ao redor de cada caixa */
+    text-align: center;
+    /* Centraliza o conteúdo textualmente */
+    padding: 3rem 2rem;
+    /* Adiciona espaçamento interno à caixa */
+}
+
+.review .box-container .box p {
+    font-size: 1.7rem;
+    /* Define o tamanho da fonte para o parágrafo */
+    line-height: 1.8;
+    /* Define o espaçamento entre linhas do texto */
+    color: #ccc;
+    /* Define uma cor cinza clara para o texto */
+    padding: 2rem 0;
+    /* Adiciona espaçamento vertical ao parágrafo */
+}
+
+.user {
+    height: 10rem;
+    /* Define a altura da imagem do usuário */
+    width: 10rem;
+    /* Define a largura da imagem do usuário */
+    border-radius: 50%;
+    /* Torna a imagem circular */
+    object-fit: cover;
+    /* Ajusta a imagem para preencher o container sem distorção */
+}
+
+.review .box-container .box h3 {
+    padding: 1rem 0;
+    /* Adiciona espaçamento vertical ao título */
+    color: #fff;
+    /* Define a cor branca para o título */
+    font-size: 2.2rem;
+    /* Define o tamanho da fonte para o título */
+}
+
+.review .box-container .box .stars ion-icon {
+    font-size: 1.7rem;
+    /* Define o tamanho dos ícones de estrela */
+    color: var(--main-color);
+    /* Aplica a cor principal aos ícones de estrela */
+}
+
+
+
+
+
+/* footer */
+.title-footer {
+    text-align: center;
+    /* Centraliza o texto */
+    text-transform: uppercase;
+    /* Converte o texto para letras maiúsculas */
+    font-size: 2rem;
+    /* Define o tamanho da fonte */
+    color: #fff;
+    /* Define a cor do texto como branco */
+    margin-bottom: 1.5rem;
+    /* Adiciona espaço abaixo do título */
+}
+
+.title-footer span {
+    color: var(--main-color);
+    /* Aplica a cor principal ao texto dentro do span */
+    text-transform: uppercase;
+    /* Converte o texto para letras maiúsculas */
+}
+
+.footer {
+    background: var(--bg);
+    /* Define a cor de fundo do rodapé */
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 4rem 0;
+    /* Adiciona espaçamento interno vertical ao rodapé */
+}
+
+.footer .container {
+    display: flex;
+    /* Ativa o layout flexível */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a próxima linha */
+    justify-content: space-between;
+    /* Distribui os itens com espaço entre eles */
+    padding: 0 7%;
+    /* Adiciona espaçamento interno horizontal */
+}
+
+.content-1 {
+    flex: 1 1 25rem;
+    /* Define tamanho flexível com largura mínima de 25rem */
+    margin: 1rem;
+    /* Adiciona espaçamento ao redor do conteúdo */
+}
+
+.content-1 ul {
+    list-style: none;
+    /* Remove os marcadores de lista */
+    padding: 0;
+    /* Remove o espaçamento interno padrão */
+}
+
+.content-1 ul li {
+    margin-bottom: 1rem;
+    /* Adiciona espaçamento inferior entre os itens da lista */
+}
+
+.content-1 ul li a {
+    color: #ccc;
+    /* Define a cor do texto como cinza claro */
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+    font-size: 1.6rem;
+    /* Define o tamanho da fonte */
+    transition: color 0.3s;
+    /* Aplica uma transição suave na mudança de cor */
+}
+
+.content-1 ul li a:hover {
+    color: var(--main-color);
+    /* Altera a cor para a cor principal ao passar o mouse */
+}
+
+.social-links {
+    display: flex;
+    /* Ativa o layout flexível */
+    gap: 1rem;
+    /* Define o espaçamento entre os itens */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
+    margin-top: 1.5rem;
+    /* Adiciona espaço acima das redes sociais */
+}
+
+.social-links a {
+    color: #ccc;
+    /* Define a cor inicial dos ícones */
+    font-size: 3rem;
+    /* Define o tamanho dos ícones */
+    transition: color 0.3s;
+    /* Adiciona uma transição suave para a mudança de cor */
+}
+
+.social-links a:hover {
+    color: var(--main-color);
+    /* Altera a cor para a cor principal ao passar o mouse */
+}
+
+.footer-bottom {
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 1rem 0;
+    /* Adiciona espaçamento interno vertical */
+    font-size: 1.6rem;
+    /* Define o tamanho da fonte */
+    border-top: var(--border);
+    /* Adiciona uma borda superior */
+    margin-top: 2rem;
+    /* Adiciona espaço acima do rodapé inferior */
+    color: #ccc;
+    /* Define a cor do texto como cinza claro */
+}
+
+
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+
+    section {
+        padding: 2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header nav a {
+        color: var(--bg-card);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5;
+        font-size: 2rem;
+    }
+
+    .home {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3 {
+        font-size: 4.5rem;
+    }
+
+    .home .content p {
+        font-size: 1.7rem;
+    }
+}
+
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
